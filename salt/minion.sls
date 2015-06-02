@@ -2,7 +2,7 @@
 
 salt-minion:
 {% if salt_settings.install_packages %}
-  pkg.installed:
+  pkg.latest:
     - name: {{ salt_settings.salt_minion }}
 {% endif %}
   file.recurse:
